@@ -33,6 +33,7 @@ public class Bird : MonoBehaviour
     void OnCollisionEnter2D()
     {
         isDead = true;
-        anim.SetTrigger("Death");
+        anim.SetTrigger("Die");
+        GameControl.instance.BirdDied();
     }
 }
